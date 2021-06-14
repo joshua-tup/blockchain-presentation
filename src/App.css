@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+
+#container {
+  position: absolute;
+  width: 1920px;
+}
+
+.vertical-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

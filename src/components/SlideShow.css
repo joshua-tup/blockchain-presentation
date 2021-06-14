@@ -1,0 +1,35 @@
+.forwards-enter {
+    transform: translateX(1920px);
+}
+
+.forwards-enter-active {
+    transform: translateX(0px);
+    transition: transform .7s;
+}
+
+.forwards-exit {
+    transform: translateX(0px);
+}
+
+.forwards-exit-active {
+    transform: translateX(-1920px);
+    transition: transform .7s;
+}
+
+.backwards-enter {
+    transform: translateX(-1920px);
+}
+
+.backwards-enter-active {
+    transform: translateX(0px);
+    transition: transform .7s;
+}
+
+.backwards-exit {
+    transform: translateX(0px);
+}
+
+.backwards-exit-active {
+    transform: translateX(1920px);
+    transition: transform .7s;
+}
