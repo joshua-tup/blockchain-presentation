@@ -80,6 +80,6 @@
 
 .row-top-exit-active {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(-100px);
     transition: transform .5s, opacity .5s;
 }

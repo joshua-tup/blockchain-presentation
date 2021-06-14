@@ -8,7 +8,7 @@ const SlideShow = () => {
 
     const [slideProgress, setSlideProgress] = useState(0);      //Existiert nur um DOM zu updaten
     const [slide, setSlide] = useState(0);
-    const maxSlideProgressPerSlide = [0,2,5];
+    const maxSlideProgressPerSlide = [0,2,2];
     const [slideState, setSlideState] = useState([0,0,0]);
     const [slideTransition, setSlideTransition] = useState("forwards");
 
@@ -18,12 +18,16 @@ const SlideShow = () => {
                 if (slide < maxSlideProgressPerSlide.length - 1) {
                     setSlideTransition("slide-forwards");
                     setSlide(slide + 1);
+                    setTimeout(function() { var scrollingElement = (document.scrollingElement || document.body); // Scroll to Top
+                                            scrollingElement.scrollTop = 0;}, 50);
                 }
             } else {
                 let slideStateTMP = slideState;
                 slideStateTMP[slide]++;
                 setSlideState(slideStateTMP);
                 setSlideProgress(slideProgress + 1);                //Existiert nur um DOM zu updaten
+                setTimeout(function() { var scrollingElement = (document.scrollingElement || document.body); // Scroll to Bottom
+                                        scrollingElement.scrollTop = scrollingElement.scrollHeight;}, 50);
             }
         }
         if (key === "Backspace" || key === "ArrowLeft" || key === "ArrowUp") {
@@ -31,12 +35,16 @@ const SlideShow = () => {
                 if (slide > 0) {
                     setSlideTransition("slide-backwards");
                     setSlide(slide - 1);
+                    setTimeout(function() { var scrollingElement = (document.scrollingElement || document.body); // Scroll to Bottom
+                                            scrollingElement.scrollTop = scrollingElement.scrollHeight;}, 50);
                 }
             } else {
                 let slideStateTMP = slideState;
                 slideStateTMP[slide]--;
                 setSlideState(slideStateTMP);
                 setSlideProgress(slideProgress - 1);                //Existiert nur um DOM zu updaten
+                setTimeout(function() { var scrollingElement = (document.scrollingElement || document.body); // Scroll to Top
+                                        scrollingElement.scrollTop = 0;}, 50);
             }
         }
         console.log(slideState);
