@@ -8,15 +8,15 @@ const SlideShow = () => {
 
     const [slideProgress, setSlideProgress] = useState(0);      //Existiert nur um DOM zu updaten
     const [slide, setSlide] = useState(0);
-    const maxSlideProgressPerSlide = [0,4,5];
+    const maxSlideProgressPerSlide = [0,2,5];
     const [slideState, setSlideState] = useState([0,0,0]);
-    const [transition, setTransition] = useState("forwards");
+    const [slideTransition, setSlideTransition] = useState("forwards");
 
     function downHandler({key}) {
         if (key === " " || key === "ArrowRight" || key === "ArrowDown") {
             if(slideState[slide] >= maxSlideProgressPerSlide[slide]) {
                 if (slide < maxSlideProgressPerSlide.length - 1) {
-                    setTransition("forwards");
+                    setSlideTransition("slide-forwards");
                     setSlide(slide + 1);
                 }
             } else {
@@ -29,7 +29,7 @@ const SlideShow = () => {
         if (key === "Backspace" || key === "ArrowLeft" || key === "ArrowUp") {
             if(slideState[slide] <= 0) {
                 if (slide > 0) {
-                    setTransition("backwards");
+                    setSlideTransition("slide-backwards");
                     setSlide(slide - 1);
                 }
             } else {
@@ -55,16 +55,16 @@ const SlideShow = () => {
         <div id='slideContainer'>
             <CSSTransition
                 in={slide === 1}
-                timeout={2000}
-                classNames={transition}
+                timeout={700}
+                classNames={slideTransition}
                 mountOnEnter={true}
                 unmountOnExit={true}>
                 <BlockchainHeader slideProgress={slideState[1]} />
             </CSSTransition>
             <CSSTransition
                 in={slide === 2}
-                timeout={2000}
-                classNames={transition}
+                timeout={700}
+                classNames={slideTransition}
                 mountOnEnter={true}
                 unmountOnExit={true}>
                 <Scenario slideProgress={slideState[2]} />

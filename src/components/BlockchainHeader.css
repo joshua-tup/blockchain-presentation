@@ -1,4 +1,7 @@
 h1 {
-    font-size: 150px;
     color: #212126;
+}
+
+.margin {
+    margin: 0 0 50px 0;
 }
