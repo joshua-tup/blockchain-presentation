@@ -1,15 +1,17 @@
 import { useState, useEffect } from 'react';
 import BlockchainHeader from "./BlockchainHeader";
-import Scenario from "./Scenario";
+import DLT from "./DLT";
+import Bitcoin from "./Bitcoin";
 import { CSSTransition } from 'react-transition-group';
 import './SlideShow.css';
+import './arrow.css';
 
 const SlideShow = () => {
 
     const [slideProgress, setSlideProgress] = useState(0);      //Existiert nur um DOM zu updaten
     const [slide, setSlide] = useState(0);
-    const maxSlideProgressPerSlide = [0,2,2];
-    const [slideState, setSlideState] = useState([0,0,0]);
+    const maxSlideProgressPerSlide = [0,3,5,2];
+    const [slideState, setSlideState] = useState([0,0,0,0]);
     const [slideTransition, setSlideTransition] = useState("forwards");
 
     function downHandler({key}) {
@@ -75,7 +77,15 @@ const SlideShow = () => {
                 classNames={slideTransition}
                 mountOnEnter={true}
                 unmountOnExit={true}>
-                <Scenario slideProgress={slideState[2]} />
+                <DLT slideProgress={slideState[2]} />
+            </CSSTransition>
+            <CSSTransition
+                in={slide === 3}
+                timeout={700}
+                classNames={slideTransition}
+                mountOnEnter={true}
+                unmountOnExit={true}>
+                <Bitcoin slideProgress={slideState[3]} />
             </CSSTransition>
         </div>
     )

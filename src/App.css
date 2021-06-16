@@ -1,7 +1,8 @@
 /*  #e1dee3  */
 
 .App {
-  text-align: center;
+    text-align: center;
+    color: #212126;
 }
 
 .vertical-center {
@@ -10,18 +11,22 @@
   align-items: center;
 }
 
-h1 {
-    color: #212126;
-}
-
 .margin {
     margin: 0 0 30px 0;
 }
 
-.my-row {
-    background-color: #e1dee3;
+.my-box {
+    background-color: white;
     border-radius: 20px;
-    padding: 30px 30px 30px 30px;
+    padding: 30px 0 30px 0;
+    box-shadow: .1em .1em .5em #c0bfc4;
+}
+
+.my-box-small {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px 0 5px 0;
+    box-shadow: .1em .1em .5em #c0bfc4;
 }
 
 #container {                /* bewirkt wunder. nicht löschen */
