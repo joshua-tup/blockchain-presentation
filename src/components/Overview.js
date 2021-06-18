@@ -4,7 +4,7 @@ import tanglePNG from '../graphics/tangle.png';
 import scmJPG from '../graphics/scm.jpg';
 /*<h1 className='display-1 margin' style={slideProgress <= 0 ? {color: "transparent"} : {}}>Distributed-Ledger-Technology</h1>*/
 
-const BlockchainHeader = ({slideProgress}) => {
+const Overview = ({slideProgress}) => {
     return (
         <div id='container' className='container-flex'>
             <CSSTransition
@@ -21,18 +21,18 @@ const BlockchainHeader = ({slideProgress}) => {
                 classNames="row-right"
                 mountOnEnter={true}
                 unmountOnExit={true}>
-            <div className='row margin justify-content-center'>
-                <div className='col-10 my-box'>
-                    <div className='row'>
-                        <div className='vertical-center col-3'>
-                            <h1 className='display-3'>Blockchain</h1>
-                        </div>
-                        <div className='col-auto'>
-                            <img src={blockchainPNG} alt="blockchain.png" />
+                <div className='row margin justify-content-center'>
+                    <div className='col-10 my-box'>
+                        <div className='row'>
+                            <div className='vertical-center col-3'>
+                                <h1 className='display-3'>Blockchain</h1>
+                            </div>
+                            <div className='col-auto'>
+                                <img src={blockchainPNG} alt="blockchain.png" />
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             </CSSTransition>
             <CSSTransition
                 in={slideProgress >= 2}
@@ -81,4 +81,4 @@ const BlockchainHeader = ({slideProgress}) => {
     )
 }
 
-export default BlockchainHeader
+export default Overview
