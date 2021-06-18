@@ -9,7 +9,9 @@ const Bitcoin = ({slideProgress}) => {
                 classNames="row-right"
                 mountOnEnter={true}
                 unmountOnExit={true}>
-                <h1 className='display-1 margin'>Bitcoin</h1>
+                <div className={'margin'}>
+                    <h1 className='display-1'>Bitcoin</h1>
+                </div>
             </CSSTransition>
             <CSSTransition
                 in={slideProgress >= 1}

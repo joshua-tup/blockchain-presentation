@@ -13,7 +13,7 @@ const SlideShow = () => {
 
     const [slideProgress, setSlideProgress] = useState(0);      //Existiert nur um DOM zu updaten
     const [slide, setSlide] = useState(0);
-    const maxSlideProgressPerSlide = [0,3,5,0,2,3,5];
+    const maxSlideProgressPerSlide = [0,3,5,2,3,8,0];
     const [slideState, setSlideState] = useState([0,0,0,0,0,0,0]);
     const [slideTransition, setSlideTransition] = useState("forwards");
 
@@ -88,7 +88,7 @@ const SlideShow = () => {
                 classNames={slideTransition}
                 mountOnEnter={true}
                 unmountOnExit={true}>
-                <Blockchain slideProgress={slideState[3]} />
+                <Bitcoin slideProgress={slideState[3]} />
             </CSSTransition>
             <CSSTransition
                 in={slide === 4}
@@ -96,7 +96,7 @@ const SlideShow = () => {
                 classNames={slideTransition}
                 mountOnEnter={true}
                 unmountOnExit={true}>
-                <Bitcoin slideProgress={slideState[4]} />
+                <Konten slideProgress={slideState[4]} />
             </CSSTransition>
             <CSSTransition
                 in={slide === 5}
@@ -104,7 +104,7 @@ const SlideShow = () => {
                 classNames={slideTransition}
                 mountOnEnter={true}
                 unmountOnExit={true}>
-                <Konten slideProgress={slideState[5]} />
+                <Transactions slideProgress={slideState[5]} />
             </CSSTransition>
             <CSSTransition
                 in={slide === 6}
@@ -112,7 +112,7 @@ const SlideShow = () => {
                 classNames={slideTransition}
                 mountOnEnter={true}
                 unmountOnExit={true}>
-                <Transactions slideProgress={slideState[6]} />
+                <Blockchain slideProgress={slideState[6]} />
             </CSSTransition>
         </div>
     )

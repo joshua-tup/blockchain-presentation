@@ -13,7 +13,9 @@ const Overview = ({slideProgress}) => {
                 classNames="row-right"
                 mountOnEnter={true}
                 unmountOnExit={true}>
-                <h1 className='display-1 margin'>Distributed-Ledger-Technology</h1>
+                <div className={'margin'}>
+                    <h1 className='display-1'>Distributed-Ledger-Technology</h1>
+                </div>
             </CSSTransition>
             <CSSTransition
                 in={slideProgress >= 1}

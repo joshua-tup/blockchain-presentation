@@ -56,7 +56,7 @@
 
 .row-right-exit-active {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(100px);
     transition: transform .5s, opacity .5s;
 }
 

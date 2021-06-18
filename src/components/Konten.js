@@ -11,7 +11,9 @@ const Konten = ({slideProgress}) => {
                 classNames="row-right"
                 mountOnEnter={true}
                 unmountOnExit={true}>
-                <h1 className='display-1 margin'>Wie funktionieren Konten?</h1>
+                <div className={'margin'}>
+                    <h1 className='display-1'>Wie funktionieren Konten?</h1>
+                </div>
             </CSSTransition>
             <CSSTransition
                 in={slideProgress >= 1}
