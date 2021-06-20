@@ -1,5 +1,10 @@
 /*  #e1dee3  */
 
+@font-face {
+    font-family: 'Signature';
+    src: url('graphics/MonsieurLaDoulaise-Regular.ttf') format('truetype')
+}
+
 .App {
     text-align: center;
     color: #212126;
@@ -7,6 +12,10 @@
 
 h1 {
     margin: 0 0 0 0 !important;
+}
+
+.my-transition {
+    transition: all 1s ease-in-out !important;
 }
 
 .vertical-center {
