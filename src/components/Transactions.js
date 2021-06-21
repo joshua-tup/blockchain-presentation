@@ -50,7 +50,7 @@ const Transactions = ({slideProgress}) => {
                                  </div>
                              </CSSTransition>
                              <CSSTransition
-                                 in={slideProgress >= 4}
+                                 in={slideProgress >= 5}
                                  timeout={500}
                                  classNames="row-right"
                                  mountOnEnter={true}
@@ -66,7 +66,27 @@ const Transactions = ({slideProgress}) => {
                              </CSSTransition>
                          </div>
                          <CSSTransition
-                             in={slideProgress >= 3}
+                          in={slideProgress >= 3}
+                          timeout={500}
+                          classNames="row-right"
+                          mountOnEnter={true}
+                          unmountOnExit={true}>
+                          <div className={"row margin"}>
+                              <div className={"col-12"}>
+                                  <div className={"my-box"}>
+                                      <h1 className='display-5'>
+                                          <img src={mailPNG} alt="mail.png" height="100" style={{margin: '0 40px 0 0'}} />
+                                          =
+                                          <img src={tresorPNG} alt="tresor.png" height="100" style={{margin: '0 40px 0 40px'}} />
+                                          <img src={coinPNG} alt="coin.png" height="100" style={{margin: '0 40px 0 0'}} />
+                                          <img src={tresorPNG} alt="tresor.png" height="100" />
+                                      </h1>
+                                  </div>
+                              </div>
+                          </div>
+                         </CSSTransition>
+                         <CSSTransition
+                             in={slideProgress >= 4}
                              timeout={500}
                              classNames="row-right"
                              mountOnEnter={true}
@@ -76,11 +96,9 @@ const Transactions = ({slideProgress}) => {
                                      <div className={"my-box"}>
                                          <h1 className='display-5'>
                                              Transaktion:
-                                             <img src={tresorPNG} alt="tresor.png" height="100" style={{margin: '0 40px 0 40px'}} />
-                                             <img src={coinPNG} alt="coin.png" height="100" style={{margin: '0 40px 0 0'}} />
-                                             <img src={tresorPNG} alt="tresor.png" height="100" />
+                                             <img src={mailPNG} alt="mail.png" height="100" style={{margin: '0 0 0 40px'}} />
                                              <CSSTransition
-                                                 in={slideProgress === 5}
+                                                 in={slideProgress === 6}
                                                  timeout={500}
                                                  classNames="row-right"
                                                  mountOnEnter={true}
@@ -88,13 +106,13 @@ const Transactions = ({slideProgress}) => {
                                                 <img src={keyPNG} alt="key.png" height="100" style={{margin: '0 0 0 40px'}} />
                                              </CSSTransition>
                                              <CSSTransition
-                                                 in={slideProgress >= 11}
+                                                 in={slideProgress >= 12}
                                                  timeout={500}
                                                  classNames="row-right"
                                                  mountOnEnter={true}
                                                  unmountOnExit={true}>
                                                  <div style={{display: 'inline', margin: '0 0 0 40px'}}>
-                                                     <p style={{display: 'inline', fontFamily: 'Signature', margin: '0 0 0 20px', color: '#ef476f'}}>Signature</p>
+                                                     <p style={{display: 'inline', fontFamily: 'Signature', margin: '0 0 0 0', color: '#ef476f'}}>Signature</p>
                                                  </div>
                                              </CSSTransition>
                                          </h1>
@@ -103,9 +121,9 @@ const Transactions = ({slideProgress}) => {
                              </div>
                          </CSSTransition>
                         <CSSTransition
-                            in={slideProgress >= 7}
+                            in={slideProgress >= 8}
                             timeout={500}
-                            classNames="row-right"
+                            classNames="row-top"
                             mountOnEnter={true}
                             unmountOnExit={true}>
                             <div className={"row margin"}>
@@ -114,19 +132,15 @@ const Transactions = ({slideProgress}) => {
                                         <h1 className={'display-5'}>
                                             Signieren(
                                             <CSSTransition
-                                                in={slideProgress >= 8}
+                                                in={slideProgress >= 9}
                                                 timeout={500}
                                                 classNames="row-top"
                                                 mountOnEnter={true}
                                                 unmountOnExit={true}>
-                                                <div style={{display: 'inline'}}>
-                                                    <img src={tresorPNG} alt="tresor.png" height="100" style={{margin: '0 40px 0 40px'}} />
-                                                    <img src={coinPNG} alt="coin.png" height="100" style={{margin: '0 0 0 0'}} />
-                                                    <img src={tresorPNG} alt="tresor.png" height="100" style={{margin: '0 40px 0 40px'}} />
-                                                </div>
+                                                <img src={mailPNG} alt="mail.png" height="100" style={{margin: '0 40px 0 40px'}} />
                                             </CSSTransition>
                                             <CSSTransition
-                                                in={slideProgress >= 9}
+                                                in={slideProgress >= 10}
                                                 timeout={500}
                                                 classNames="row-top"
                                                 mountOnEnter={true}
@@ -137,7 +151,7 @@ const Transactions = ({slideProgress}) => {
                                             </CSSTransition>
                                             )
                                             <CSSTransition
-                                                in={slideProgress >= 10}
+                                                in={slideProgress >= 11}
                                                 timeout={500}
                                                 classNames="row-top"
                                                 mountOnEnter={true}
@@ -152,9 +166,9 @@ const Transactions = ({slideProgress}) => {
                             </div>
                         </CSSTransition>
                         <CSSTransition
-                            in={slideProgress >= 12}
+                            in={slideProgress >= 13}
                             timeout={500}
-                            classNames="row-right"
+                            classNames="row-top"
                             mountOnEnter={true}
                             unmountOnExit={true}>
                             <div className={"row"}>
@@ -163,36 +177,40 @@ const Transactions = ({slideProgress}) => {
                                         <h1 className={'display-5'}>
                                             Verifizieren(
                                             <CSSTransition
-                                                in={slideProgress >= 13}
-                                                timeout={500}
-                                                classNames="row-top"
-                                                mountOnEnter={true}
-                                                unmountOnExit={true}>
-                                                <div style={{display: 'inline'}}>
-                                                    <img src={tresorPNG} alt="tresor.png" height="100" style={{margin: '0 40px 0 40px'}} />
-                                                    <img src={coinPNG} alt="coin.png" height="100" style={{margin: '0 0 0 0'}} />
-                                                    <img src={tresorPNG} alt="tresor.png" height="100" style={{margin: '0 0 0 40px'}} />
-                                                </div>
-                                            </CSSTransition>
-                                            <CSSTransition
                                                 in={slideProgress >= 14}
                                                 timeout={500}
                                                 classNames="row-top"
                                                 mountOnEnter={true}
                                                 unmountOnExit={true}>
-                                                <div style={{display: 'inline', margin: '0 0 0 40px'}}>
-                                                    <p style={{display: 'inline', fontFamily: 'Signature', margin: '0 20px 0 0', color: '#ef476f'}}>Signature</p>
-                                                </div>
+                                                <img src={mailPNG} alt="mail.png" height="100" style={{margin: '0 40px 0 40px'}} />
                                             </CSSTransition>
-                                            )
                                             <CSSTransition
                                                 in={slideProgress >= 15}
                                                 timeout={500}
                                                 classNames="row-top"
                                                 mountOnEnter={true}
                                                 unmountOnExit={true}>
+                                                <img src={tresorPNG} alt="tresor.png" height="100" style={{margin: '0 40px 0 0'}} />
+                                            </CSSTransition>
+                                            <CSSTransition
+                                                in={slideProgress >= 16}
+                                                timeout={500}
+                                                classNames="row-top"
+                                                mountOnEnter={true}
+                                                unmountOnExit={true}>
+                                                <div style={{display: 'inline', margin: '0 0 0 0'}}>
+                                                    <p style={{display: 'inline', fontFamily: 'Signature', margin: '0 20px 0 0', color: '#ef476f'}}>Signature</p>
+                                                </div>
+                                            </CSSTransition>
+                                            )
+                                            <CSSTransition
+                                                in={slideProgress >= 17}
+                                                timeout={500}
+                                                classNames="row-top"
+                                                mountOnEnter={true}
+                                                unmountOnExit={true}>
                                                 <div style={{display: 'inline', margin: '0 0 0 40px'}}>
-                                                    = T / F
+                                                    = <p style={{display: 'inline', margin: '0 0 0 20px'}}> T / F </p>
                                                 </div>
                                             </CSSTransition>
                                         </h1>
