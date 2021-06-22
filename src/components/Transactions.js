@@ -2,7 +2,7 @@ import { CSSTransition } from 'react-transition-group';
 import tresorPNG from "../graphics/tresor.png";
 import keyPNG from "../graphics/key.png";
 import coinPNG from "../graphics/coin.png";
-import mailPNG from "../graphics/mail.png";
+import transactionPNG from "../graphics/transaction.png";
 
 const Transactions = ({slideProgress}) => {
     return (
@@ -50,7 +50,7 @@ const Transactions = ({slideProgress}) => {
                                  </div>
                              </CSSTransition>
                              <CSSTransition
-                                 in={slideProgress >= 5}
+                                 in={slideProgress >= 4}
                                  timeout={500}
                                  classNames="row-right"
                                  mountOnEnter={true}
@@ -66,27 +66,7 @@ const Transactions = ({slideProgress}) => {
                              </CSSTransition>
                          </div>
                          <CSSTransition
-                          in={slideProgress >= 3}
-                          timeout={500}
-                          classNames="row-right"
-                          mountOnEnter={true}
-                          unmountOnExit={true}>
-                          <div className={"row margin"}>
-                              <div className={"col-12"}>
-                                  <div className={"my-box"}>
-                                      <h1 className='display-5'>
-                                          <img src={mailPNG} alt="mail.png" height="100" style={{margin: '0 40px 0 0'}} />
-                                          =
-                                          <img src={tresorPNG} alt="tresor.png" height="100" style={{margin: '0 40px 0 40px'}} />
-                                          <img src={coinPNG} alt="coin.png" height="100" style={{margin: '0 40px 0 0'}} />
-                                          <img src={tresorPNG} alt="tresor.png" height="100" />
-                                      </h1>
-                                  </div>
-                              </div>
-                          </div>
-                         </CSSTransition>
-                         <CSSTransition
-                             in={slideProgress >= 4}
+                             in={slideProgress >= 3}
                              timeout={500}
                              classNames="row-right"
                              mountOnEnter={true}
@@ -96,9 +76,17 @@ const Transactions = ({slideProgress}) => {
                                      <div className={"my-box"}>
                                          <h1 className='display-5'>
                                              Transaktion:
-                                             <img src={mailPNG} alt="mail.png" height="100" style={{margin: '0 0 0 40px'}} />
                                              <CSSTransition
-                                                 in={slideProgress === 6}
+                                                 in={slideProgress >= 16}
+                                                 timeout={500}
+                                                 classNames="row-top"
+                                                 mountOnEnter={true}
+                                                 unmountOnExit={true}>
+                                                 <p style={{display: 'inline', fontStyle: 'italic', fontWeight: '600', margin: '0 0 0 20px'}}> i</p>
+                                             </CSSTransition>
+                                             <img src={transactionPNG} alt="transaction.png" height="100" style={{margin: '-30px 0 0 40px'}} />
+                                             <CSSTransition
+                                                 in={slideProgress === 5}
                                                  timeout={500}
                                                  classNames="row-right"
                                                  mountOnEnter={true}
@@ -106,7 +94,7 @@ const Transactions = ({slideProgress}) => {
                                                 <img src={keyPNG} alt="key.png" height="100" style={{margin: '0 0 0 40px'}} />
                                              </CSSTransition>
                                              <CSSTransition
-                                                 in={slideProgress >= 12}
+                                                 in={slideProgress >= 11}
                                                  timeout={500}
                                                  classNames="row-right"
                                                  mountOnEnter={true}
@@ -121,7 +109,7 @@ const Transactions = ({slideProgress}) => {
                              </div>
                          </CSSTransition>
                         <CSSTransition
-                            in={slideProgress >= 8}
+                            in={slideProgress >= 7}
                             timeout={500}
                             classNames="row-top"
                             mountOnEnter={true}
@@ -132,15 +120,23 @@ const Transactions = ({slideProgress}) => {
                                         <h1 className={'display-5'}>
                                             Signieren(
                                             <CSSTransition
-                                                in={slideProgress >= 9}
+                                                in={slideProgress >= 16}
                                                 timeout={500}
                                                 classNames="row-top"
                                                 mountOnEnter={true}
                                                 unmountOnExit={true}>
-                                                <img src={mailPNG} alt="mail.png" height="100" style={{margin: '0 40px 0 40px'}} />
+                                                <p style={{display: 'inline', fontStyle: 'italic', fontWeight: '600', margin: '0 0 0 20px'}}> i</p>
                                             </CSSTransition>
                                             <CSSTransition
-                                                in={slideProgress >= 10}
+                                                in={slideProgress >= 8}
+                                                timeout={500}
+                                                classNames="row-top"
+                                                mountOnEnter={true}
+                                                unmountOnExit={true}>
+                                                <img src={transactionPNG} alt="transaction.png" height="100" style={{margin: '-40px 40px 0 40px'}} />
+                                            </CSSTransition>
+                                            <CSSTransition
+                                                in={slideProgress >= 9}
                                                 timeout={500}
                                                 classNames="row-top"
                                                 mountOnEnter={true}
@@ -151,7 +147,7 @@ const Transactions = ({slideProgress}) => {
                                             </CSSTransition>
                                             )
                                             <CSSTransition
-                                                in={slideProgress >= 11}
+                                                in={slideProgress >= 10}
                                                 timeout={500}
                                                 classNames="row-top"
                                                 mountOnEnter={true}
@@ -166,7 +162,7 @@ const Transactions = ({slideProgress}) => {
                             </div>
                         </CSSTransition>
                         <CSSTransition
-                            in={slideProgress >= 13}
+                            in={slideProgress >= 12}
                             timeout={500}
                             classNames="row-top"
                             mountOnEnter={true}
@@ -177,23 +173,23 @@ const Transactions = ({slideProgress}) => {
                                         <h1 className={'display-5'}>
                                             Verifizieren(
                                             <CSSTransition
-                                                in={slideProgress >= 14}
-                                                timeout={500}
-                                                classNames="row-top"
-                                                mountOnEnter={true}
-                                                unmountOnExit={true}>
-                                                <img src={mailPNG} alt="mail.png" height="100" style={{margin: '0 40px 0 40px'}} />
-                                            </CSSTransition>
-                                            <CSSTransition
-                                                in={slideProgress >= 15}
-                                                timeout={500}
-                                                classNames="row-top"
-                                                mountOnEnter={true}
-                                                unmountOnExit={true}>
-                                                <img src={tresorPNG} alt="tresor.png" height="100" style={{margin: '0 40px 0 0'}} />
-                                            </CSSTransition>
-                                            <CSSTransition
                                                 in={slideProgress >= 16}
+                                                timeout={500}
+                                                classNames="row-top"
+                                                mountOnEnter={true}
+                                                unmountOnExit={true}>
+                                                <p style={{display: 'inline', fontStyle: 'italic', fontWeight: '600', margin: '0 0 0 20px'}}> i</p>
+                                            </CSSTransition>
+                                            <CSSTransition
+                                                in={slideProgress >= 13}
+                                                timeout={500}
+                                                classNames="row-top"
+                                                mountOnEnter={true}
+                                                unmountOnExit={true}>
+                                                <img src={transactionPNG} alt="transaction.png" height="100" style={{margin: '-40px 40px 0 40px'}} />
+                                            </CSSTransition>
+                                            <CSSTransition
+                                                in={slideProgress >= 14}
                                                 timeout={500}
                                                 classNames="row-top"
                                                 mountOnEnter={true}
@@ -204,7 +200,7 @@ const Transactions = ({slideProgress}) => {
                                             </CSSTransition>
                                             )
                                             <CSSTransition
-                                                in={slideProgress >= 17}
+                                                in={slideProgress >= 15}
                                                 timeout={500}
                                                 classNames="row-top"
                                                 mountOnEnter={true}

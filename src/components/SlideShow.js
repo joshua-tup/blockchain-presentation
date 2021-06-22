@@ -8,13 +8,14 @@ import { CSSTransition } from 'react-transition-group';
 import './SlideShow.css';
 import './arrow.css';
 import Blockchain from "./Blockchain";
+import ProofOfWork from "./ProofOfWork";
 
 const SlideShow = () => {
 
     const [slideProgress, setSlideProgress] = useState(0);      //Existiert nur um DOM zu updaten
     const [slide, setSlide] = useState(0);
-    const maxSlideProgressPerSlide = [0,3,5,2,3,17,10];
-    const [slideState, setSlideState] = useState([0,0,0,0,0,0,0]);
+    const maxSlideProgressPerSlide = [0,3,5,2,3,16,8,5];
+    const [slideState, setSlideState] = useState([0,0,0,0,0,0,0,0]);
     const [slideTransition, setSlideTransition] = useState("forwards");
 
     function downHandler({key}) {
@@ -113,6 +114,14 @@ const SlideShow = () => {
                 mountOnEnter={true}
                 unmountOnExit={true}>
                 <Blockchain slideProgress={slideState[6]} />
+            </CSSTransition>
+            <CSSTransition
+                in={slide === 7}
+                timeout={700}
+                classNames={slideTransition}
+                mountOnEnter={true}
+                unmountOnExit={true}>
+                <ProofOfWork slideProgress={slideState[7]} />
             </CSSTransition>
         </div>
     )
