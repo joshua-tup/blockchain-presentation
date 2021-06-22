@@ -13,7 +13,7 @@ const Blockchain = ({slideProgress}) => {
                 mountOnEnter={true}
                 unmountOnExit={true}>
                 <div className='margin'>
-                    <h1 className='display-1 margin'>Blockchain</h1>
+                    <h1 className='display-1'>Blockchain</h1>
                     <div className={"row"}>
                         <div className={"col-12"}>
                             <img src={blockchainPNG} alt="blockchain.png" width="750px" />

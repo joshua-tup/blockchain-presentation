@@ -14,7 +14,7 @@ const SlideShow = () => {
 
     const [slideProgress, setSlideProgress] = useState(0);      //Existiert nur um DOM zu updaten
     const [slide, setSlide] = useState(0);
-    const maxSlideProgressPerSlide = [0,3,5,2,3,16,8,5];
+    const maxSlideProgressPerSlide = [0,3,5,2,3,16,6,10];
     const [slideState, setSlideState] = useState([0,0,0,0,0,0,0,0]);
     const [slideTransition, setSlideTransition] = useState("forwards");
 
