@@ -4,6 +4,7 @@ import blueBlockchainPNG from "../graphics/blue_blockchain.png";
 import redBlockchainPNG from "../graphics/red_blockchain.png";
 import yellowBlockchainPNG from "../graphics/yellow_blockchain.png";
 import greenBlockchainPNG from "../graphics/green_blockchain.png";
+import timePNG from "../graphics/time.png";
 
 const ProofOfWork = ({slideProgress}) => {
     return (
@@ -75,11 +76,37 @@ const ProofOfWork = ({slideProgress}) => {
                             classNames="row-right"
                             mountOnEnter={true}
                             unmountOnExit={true}>
-                            <div className='row justify-content-center'>
-                                <div className='col-5' style={{textAlign: 'left'}}>
-                                    <h1 className='display-7'>
-                                        <img src={blueBlockchainPNG} alt="blue_blockchain.png" height="120px" />
-                                    </h1>
+                            <div className='row justify-content-center' style={{margin: '20px 0 0 190px'}}>
+                                <div className='col-7' style={{textAlign: 'left'}}>
+                                    <h2>
+                                        <div style={{display: "inline-block"}}>
+                                            <img src={timePNG} alt="time.png" height="45px" style={{margin: '0 10px 0 0'}}/>
+                                            ≈ 10 min
+                                        </div>
+                                        <CSSTransition
+                                            in={slideProgress >= 5}
+                                            timeout={500}
+                                            classNames="row-right"
+                                            mountOnEnter={true}
+                                            unmountOnExit={true}>
+                                            <div style={{display: "inline-block", margin: '0 0 0 60px'}}>
+                                                <img src={timePNG} alt="time.png" height="45px" style={{margin: '0 10px 0 0'}}/>
+                                                ≈ 10 min
+                                            </div>
+                                        </CSSTransition>
+                                        <CSSTransition
+                                            in={slideProgress >= 7}
+                                            timeout={500}
+                                            classNames="row-right"
+                                            mountOnEnter={true}
+                                            unmountOnExit={true}>
+                                            <div style={{display: "inline-block", margin: '0 0 0 60px'}}>
+                                                <img src={timePNG} alt="time.png" height="45px" style={{margin: '0 10px 0 0'}}/>
+                                                ≈ 10 min
+                                            </div>
+                                        </CSSTransition>
+                                    </h2>
+
                                 </div>
                             </div>
                         </CSSTransition>
