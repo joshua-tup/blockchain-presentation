@@ -1,10 +1,10 @@
 import { CSSTransition } from 'react-transition-group';
-import blockPNG from "../graphics/block.png";
 import blueBlockchainPNG from "../graphics/blue_blockchain.png";
 import redBlockchainPNG from "../graphics/red_blockchain.png";
 import yellowBlockchainPNG from "../graphics/yellow_blockchain.png";
 import greenBlockchainPNG from "../graphics/green_blockchain.png";
 import timePNG from "../graphics/time.png";
+import blockPNG from "../graphics/block.png";
 
 const ProofOfWork = ({slideProgress}) => {
     return (
@@ -76,7 +76,7 @@ const ProofOfWork = ({slideProgress}) => {
                             classNames="row-right"
                             mountOnEnter={true}
                             unmountOnExit={true}>
-                            <div className='row justify-content-center' style={{margin: '20px 0 0 190px'}}>
+                            <div className='row justify-content-center' style={{margin: '20px 0 30px 190px'}}>
                                 <div className='col-7' style={{textAlign: 'left'}}>
                                     <h2>
                                         <div style={{display: "inline-block"}}>
@@ -109,7 +109,45 @@ const ProofOfWork = ({slideProgress}) => {
                                 </div>
                             </div>
                         </CSSTransition>
-
+                        <CSSTransition
+                            in={slideProgress >= 9}
+                            timeout={500}
+                            classNames="row-right"
+                            mountOnEnter={true}
+                            unmountOnExit={true}>
+                            <div className={'row justify-content-center'}>
+                                <div className={'col-6'}>
+                                    <div className={'my-box margin'}>
+                                        <h1 className={'display-5'}>
+                                            SHA-256(
+                                            <img src={blockPNG} alt="block.png" height="80px" style={{margin: '0 25px 0 25px'}}/>
+                                            + Nonce ) = Hash
+                                        </h1>
+                                    </div>
+                                    <div className={'my-box margin'}>
+                                        <h1>
+                                            SHA-256(
+                                            <img src={blockPNG} alt="block.png" height="60px" style={{margin: '0 25px 0 25px'}}/>
+                                            + 1d33c... ) = 7cc3b...
+                                        </h1>
+                                    </div>
+                                    <div className={'my-box margin'}>
+                                        <h1>
+                                            SHA-256(
+                                            <img src={blockPNG} alt="block.png" height="60px" style={{margin: '0 25px 0 25px'}}/>
+                                            + e51c3... ) = 51c74...
+                                        </h1>
+                                    </div>
+                                    <div className={'my-box margin'}>
+                                        <h1>
+                                            SHA-256(
+                                            <img src={blockPNG} alt="block.png" height="60px" style={{margin: '0 25px 0 25px'}}/>
+                                            + c8e04... ) = 00000...
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </CSSTransition>
                     </div>
                 </CSSTransition>
                 {/*<CSSTransition

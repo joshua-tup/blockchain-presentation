@@ -2,6 +2,7 @@ import { CSSTransition } from 'react-transition-group';
 import blockchainPNG from '../graphics/blockchain.png';
 import dotsPNG from "../graphics/dots.png";
 import transactionPNG from "../graphics/transaction.png";
+import forksPNG from "../graphics/forks.png";
 
 const Blockchain = ({slideProgress}) => {
     return (
@@ -141,13 +142,20 @@ const Blockchain = ({slideProgress}) => {
                             <CSSTransition
                                 in={slideProgress >= 7}
                                 timeout={500}
-                                classNames="row-top"
+                                classNames="row-right"
                                 mountOnEnter={true}
                                 unmountOnExit={true}>
                                 <div className='col-7'>
                                     <div className='my-box' style={{backgroundColor: '#FFBFBF'}}>
                                         <h1 className={'display-5'}>Problem: Forks!</h1>
-                                        <h1></h1>
+                                        <CSSTransition
+                                            in={slideProgress >= 8}
+                                            timeout={500}
+                                            classNames="row-top"
+                                            mountOnEnter={true}
+                                            unmountOnExit={true}>
+                                            <img style={{transform: 'rotate(-90deg) scaleX(-1)', margin: '20px 0 0 0'}} src={forksPNG} alt="forks.png" width="800" />
+                                        </CSSTransition>
                                     </div>
                                 </div>
                             </CSSTransition>
