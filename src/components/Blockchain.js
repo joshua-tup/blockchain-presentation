@@ -138,6 +138,19 @@ const Blockchain = ({slideProgress}) => {
                                     </div>
                                 </CSSTransition>
                             </div>
+                            <CSSTransition
+                                in={slideProgress >= 7}
+                                timeout={500}
+                                classNames="row-top"
+                                mountOnEnter={true}
+                                unmountOnExit={true}>
+                                <div className='col-7'>
+                                    <div className='my-box' style={{backgroundColor: '#FFBFBF'}}>
+                                        <h1 className={'display-5'}>Problem: Forks!</h1>
+                                        <h1></h1>
+                                    </div>
+                                </div>
+                            </CSSTransition>
                         </div>
                     </div>
                 </div>

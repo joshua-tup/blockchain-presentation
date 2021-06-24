@@ -106,10 +106,10 @@ const ProofOfWork = ({slideProgress}) => {
                                             </div>
                                         </CSSTransition>
                                     </h2>
-
                                 </div>
                             </div>
                         </CSSTransition>
+
                     </div>
                 </CSSTransition>
                 {/*<CSSTransition

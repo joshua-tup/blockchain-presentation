@@ -167,7 +167,7 @@ const Transactions = ({slideProgress}) => {
                             classNames="row-top"
                             mountOnEnter={true}
                             unmountOnExit={true}>
-                            <div className={"row"}>
+                            <div className={"row margin"}>
                                 <div className={"col-12"}>
                                     <div className={"my-box"}>
                                         <h1 className={'display-5'}>
@@ -214,6 +214,62 @@ const Transactions = ({slideProgress}) => {
                                 </div>
                             </div>
                         </CSSTransition>
+                        <div className={"row"}>
+                            <CSSTransition
+                                in={slideProgress >= 17}
+                                timeout={500}
+                                classNames="row-top"
+                                mountOnEnter={true}
+                                unmountOnExit={true}>
+                                <div className={"col-6"}>
+                                    <div className="icon" style={{transform: "rotate(90deg)", marginBottom: "30px"}}>
+                                        <div className="arrow"/>
+                                    </div>
+                                </div>
+                            </CSSTransition>
+                            <CSSTransition
+                                in={slideProgress >= 18}
+                                timeout={500}
+                                classNames="row-top"
+                                mountOnEnter={true}
+                                unmountOnExit={true}>
+                                <div className={"col-6"}>
+                                    <div className="icon" style={{transform: "rotate(90deg)", marginBottom: "30px"}}>
+                                        <div className="arrow"/>
+                                    </div>
+                                </div>
+                            </CSSTransition>
+                        </div>
+                        <div className={"row"}>
+                            <CSSTransition
+                                in={slideProgress >= 17}
+                                timeout={500}
+                                classNames="row-top"
+                                mountOnEnter={true}
+                                unmountOnExit={true}>
+                                <div className={"col-6"}>
+                                    <div className={"my-box"} style={{backgroundColor: '#C9FFC9'}}>
+                                        <h1>
+                                            Authorisierung einer Transaktion ist nachprüfbar
+                                        </h1>
+                                    </div>
+                                </div>
+                            </CSSTransition>
+                            <CSSTransition
+                                in={slideProgress >= 18}
+                                timeout={500}
+                                classNames="row-top"
+                                mountOnEnter={true}
+                                unmountOnExit={true}>
+                                <div className={"col-6"}>
+                                    <div className={"my-box"} style={{backgroundColor: '#FFBFBF'}}>
+                                        <h1>
+                                            Overspending
+                                        </h1>
+                                    </div>
+                                </div>
+                            </CSSTransition>
+                        </div>
                     </div>
                 </div>
             </CSSTransition>
