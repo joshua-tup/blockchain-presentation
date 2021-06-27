@@ -124,27 +124,48 @@ const ProofOfWork = ({slideProgress}) => {
                                             + Nonce ) = Hash
                                         </h1>
                                     </div>
-                                    <div className={'my-box margin'}>
-                                        <h1>
-                                            SHA-256(
-                                            <img src={blockPNG} alt="block.png" height="60px" style={{margin: '0 25px 0 25px'}}/>
-                                            + 1d33c... ) = 7cc3b...
-                                        </h1>
-                                    </div>
-                                    <div className={'my-box margin'}>
-                                        <h1>
-                                            SHA-256(
-                                            <img src={blockPNG} alt="block.png" height="60px" style={{margin: '0 25px 0 25px'}}/>
-                                            + e51c3... ) = 51c74...
-                                        </h1>
-                                    </div>
-                                    <div className={'my-box margin'}>
-                                        <h1>
-                                            SHA-256(
-                                            <img src={blockPNG} alt="block.png" height="60px" style={{margin: '0 25px 0 25px'}}/>
-                                            + c8e04... ) = 00000...
-                                        </h1>
-                                    </div>
+                                    <CSSTransition
+                                        in={slideProgress >= 10}
+                                        timeout={500}
+                                        classNames="row-right"
+                                        mountOnEnter={true}
+                                        unmountOnExit={true}>
+                                        <div className={'my-box margin'}>
+                                            <h1>
+                                                SHA-256(
+                                                <img src={blockPNG} alt="block.png" height="60px" style={{margin: '0 25px 0 25px'}}/>
+                                                + 1d33c... ) = 7cc3b...
+                                            </h1>
+                                        </div>
+                                    </CSSTransition>
+                                    <CSSTransition
+                                        in={slideProgress >= 11}
+                                        timeout={500}
+                                        classNames="row-right"
+                                        mountOnEnter={true}
+                                        unmountOnExit={true}>
+                                        <div className={'my-box margin'}>
+                                            <h1>
+                                                SHA-256(
+                                                <img src={blockPNG} alt="block.png" height="60px" style={{margin: '0 25px 0 25px'}}/>
+                                                + e51c3... ) = 51c74...
+                                            </h1>
+                                        </div>
+                                    </CSSTransition>
+                                    <CSSTransition
+                                        in={slideProgress >= 12}
+                                        timeout={500}
+                                        classNames="row-right"
+                                        mountOnEnter={true}
+                                        unmountOnExit={true}>
+                                        <div className={'my-box margin'}>
+                                            <h1>
+                                                SHA-256(
+                                                <img src={blockPNG} alt="block.png" height="60px" style={{margin: '0 25px 0 25px'}}/>
+                                                + c8e04... ) = 00000...
+                                            </h1>
+                                        </div>
+                                    </CSSTransition>
                                 </div>
                             </div>
                         </CSSTransition>
