@@ -9,13 +9,16 @@ import './SlideShow.css';
 import './arrow.css';
 import Blockchain from "./Blockchain";
 import ProofOfWork from "./ProofOfWork";
+import Summary from "./Summary";
+import FurtherBitcoin from "./FurtherBitcoin";
+import Ethereum from "./Ethereum";
 
 const SlideShow = () => {
 
     const [slideProgress, setSlideProgress] = useState(0);      //Existiert nur um DOM zu updaten
     const [slide, setSlide] = useState(0);
-    const maxSlideProgressPerSlide = [0,3,5,2,3,18,8,12];
-    const [slideState, setSlideState] = useState([0,0,0,0,0,0,0,0]);
+    const maxSlideProgressPerSlide = [0,3,5,2,3,18,8,12,0,2,4];
+    const [slideState, setSlideState] = useState([0,0,0,0,0,0,0,0,0,0,0]);
     const [slideTransition, setSlideTransition] = useState("forwards");
 
     function downHandler({key}) {
@@ -122,6 +125,30 @@ const SlideShow = () => {
                 mountOnEnter={true}
                 unmountOnExit={true}>
                 <ProofOfWork slideProgress={slideState[7]} />
+            </CSSTransition>
+            <CSSTransition
+                in={slide === 8}
+                timeout={700}
+                classNames={slideTransition}
+                mountOnEnter={true}
+                unmountOnExit={true}>
+                <Summary slideProgress={slideState[8]} />
+            </CSSTransition>
+            <CSSTransition
+                in={slide === 9}
+                timeout={700}
+                classNames={slideTransition}
+                mountOnEnter={true}
+                unmountOnExit={true}>
+                <FurtherBitcoin slideProgress={slideState[9]} />
+            </CSSTransition>
+            <CSSTransition
+                in={slide === 10}
+                timeout={700}
+                classNames={slideTransition}
+                mountOnEnter={true}
+                unmountOnExit={true}>
+                <Ethereum slideProgress={slideState[10]} />
             </CSSTransition>
         </div>
     )
