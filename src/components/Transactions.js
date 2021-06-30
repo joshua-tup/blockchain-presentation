@@ -247,7 +247,7 @@ const Transactions = ({slideProgress}) => {
                                 classNames="row-top"
                                 mountOnEnter={true}
                                 unmountOnExit={true}>
-                                <div className={"col-6"}>
+                                <div className={"col-6 margin"}>
                                     <div className={"my-box"} style={{backgroundColor: '#C9FFC9'}}>
                                         <h1>
                                             Authorisierung einer Transaktion ist nachprüfbar
@@ -261,7 +261,7 @@ const Transactions = ({slideProgress}) => {
                                 classNames="row-top"
                                 mountOnEnter={true}
                                 unmountOnExit={true}>
-                                <div className={"col-6"}>
+                                <div className={"col-6 margin"}>
                                     <div className={"my-box"} style={{backgroundColor: '#FFBFBF'}}>
                                         <h1>
                                             Overspending
