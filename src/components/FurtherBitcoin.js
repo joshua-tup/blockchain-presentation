@@ -45,7 +45,7 @@ const FurtherBitcoin = ({slideProgress}) => {
                                             <h1 className='display-6' style={{padding: '20px 0 0 0'}}>- hohe Latenz oder hohe Gebühren</h1>
                                             <h1 className='display-6' style={{padding: '20px 0 0 0'}}>- schlechte Skalierung (3-4 TPS / 1 MB)</h1>
                                             <h1 className='display-6' style={{padding: '20px 0 0 40px'}}>-> Hard-Fork: Bitcoin Cash (24-32 TPS / 8 MB)</h1>
-                                            <h1 className='display-6' style={{padding: '20px 0 0 0'}}>- Mining Pools</h1>
+                                            <h1 className='display-6' style={{padding: '20px 0 0 0'}}>- Zentralisierung (Mining Pools)</h1>
                                             <h1 className='display-6' style={{padding: '20px 0 0 0'}}>- Interessenskonflikt zwischen Minern und Nutzern</h1>
                                         </div>
                                     </div>

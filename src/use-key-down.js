@@ -12,10 +12,8 @@ export default function useKeyDown() {
         if (key === " " || key === "ArrowDown" || key === "ArrowRight") {
             if(slideProgressTmp >= maxProgressPerSlide[slideTmp]) {
                 if (slideTmp < maxProgressPerSlide.length - 1) {
-                    console.log("hey")
                     slideTmp++;
                     setSlide(slideTmp+1);
-                    console.log(slideTmp + "  llllllllllllllllllllllllllllllll")
                     slideProgressTmp = 0;
                     setSlideProgress(0);
                 }
