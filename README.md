@@ -2,6 +2,7 @@
 
 ```
 git clone https://github.com/joshua-tup/blockchain-presentation.git
+cd blockchain-presentation
 npm install
 npm start
 ```
